@@ -43,12 +43,20 @@ sudo pip3 install thefuck
 #Cuz Man, they just make sense for my fingers. 
 #You're welcome to take them for a spin :D
 
-setxkbmap -option Escape:Caps_Lock
-setxkbmap -option Caps_Lock:Escape
-setxkbmap -option Control_L:Super_L
-setxkbmap -option Super_L:Alt_L
-setxkbmap -option Alt_L:Control_L
-setxkbmap -option Control_R:Alt_R
-setxkbmap -option Alt_R:Control_R
+# setxkbmap -option Escape:Caps_Lock
+# setxkbmap -option Caps_Lock:Escape
+# setxkbmap -option Control_L:Super_L
+# setxkbmap -option Super_L:Alt_L
+# setxkbmap -option Alt_L:Control_L
+# setxkbmap -option Control_R:Alt_R
+# setxkbmap -option Alt_R:Control_R
+
+xmodmap -pke
+
+touch ./keyboard/.Xmodmap
+xmodmap -pke > ~/keyboard/.Xmodmap
+
+
+xmodmap ~/.Xmodmap
 
 
